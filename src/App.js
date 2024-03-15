@@ -15,7 +15,8 @@ function App() {
   /* add your cart state code here */
   const [cart, setCart] = useState([]);
   const [itemCounts, setItemCounts] = useState({}); // State to keep track of item counts
-  
+  const cartItems = Object.keys(itemCounts).filter(itemName => itemCounts[itemName] > 0);
+
   const addToCart = (item) => {
     setCart([...cart, item]);
     setItemCounts(prevCounts => ({
@@ -24,9 +25,14 @@ function App() {
     }));
   };
 
-  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+  const totalPrice = Object.keys(itemCounts).reduce((total, itemName) => {
+    const item = bakeryData.find(item => item.name === itemName);
+    const count = itemCounts[itemName];
+    return total + (item ? item.price * count : 0);
+  }, 0);
+
   const removeFromCart = (item) => {
-    setCart(cart.filter(cartItem => cartItem !== item)); // Remove the item from the cart
+    setCart(cart.filter(cartItem => cartItem !== item));  // Remove the item from the cart
     setItemCounts(prevCounts => ({
       ...prevCounts,
       [item.name]: (prevCounts[item.name] || 0) - 1 // Decrement count for the item
@@ -45,7 +51,7 @@ function App() {
       <div className="Cart">
         <h2>Cart</h2>
         <ul>
-          {Object.keys(itemCounts).map((itemName, index) => (
+          {cartItems.map((itemName, index) => (
             <li key={index}>{itemCounts[itemName]} x {itemName}
             <button onClick={() => removeFromCart(bakeryData.find(item => item.name === itemName))}>
                 Remove from Cart
