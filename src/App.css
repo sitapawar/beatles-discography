@@ -1,9 +1,35 @@
 /* Add styling for your page here */
 
 .App {
-
 }
-
+.pageContents{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
 .BakeryItem {
-  
+    width:300px;
 }
+h1{
+    text-align: center;
+}
+img{
+width:80%
+}
+.Cart{
+    margin:2%;
+    width:20%;
+}
+.bakeryItems{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
+  flex-grow:1;
+  width:80%;
+  margin: 0;
+}
+ul, ol {
+    list-style-type: none;
+    padding-left: 1vw;
+  }
+
