@@ -1,65 +1,52 @@
 import "./App.css";
 import { useState } from "react";
-import bakeryData from "./assets/bakery-data.json";
-import BakeryItem from './components/BakeryItem'; // Adjust the import path
-
-
-/* ####### DO NOT TOUCH -- this makes the image URLs work ####### */
-bakeryData.forEach((item) => {
-  item.image = process.env.PUBLIC_URL + "/" + item.image;
-});
-/* ############################################################## */
+import albumData from "./assets/albumData.json";
+import AlbumItem from "./components/AlbumItem";
 
 function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
-  const [cart, setCart] = useState([]);
+  const [favorites, setFavs] = useState([]);
   const [itemCounts, setItemCounts] = useState({}); // State to keep track of item counts
   const cartItems = Object.keys(itemCounts).filter(itemName => itemCounts[itemName] > 0);
 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const addToFavs = (item) => {
+    setFavs([...favorites, item]);
     setItemCounts(prevCounts => ({
       ...prevCounts,
-      [item.name]: (prevCounts[item.name] || 0) + 1 // Increment count for the item
+      [item.album]: (prevCounts[item.album] || 0) + 1 // Increment count for the item
     }));
   };
 
-  const totalPrice = Object.keys(itemCounts).reduce((total, itemName) => {
-    const item = bakeryData.find(item => item.name === itemName);
-    const count = itemCounts[itemName];
-    return total + (item ? item.price * count : 0);
-  }, 0);
 
   const removeFromCart = (item) => {
-    setCart(cart.filter(cartItem => cartItem !== item));  // Remove the item from the cart
+    setFavs(favorites.filter(cartItem => cartItem !== item));  // Remove the item from the cart
     setItemCounts(prevCounts => ({
       ...prevCounts,
-      [item.name]: (prevCounts[item.name] || 0) - 1 // Decrement count for the item
+      [item.album]: (prevCounts[item.album] || 0) - 1 // Decrement count for the item
     }));
   };
+  const totalFavorites = favorites.length;
+
 
   return (
     <div className="App">
-      <h1>Sita's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
+      <h1>Beatles Discography</h1>
     <div class ="pageContents">
-    <div class ="bakeryItems">
-      {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-         <BakeryItem item={item} addToCart={addToCart} /> // replace with BakeryItem component
+    <div class ="albumList">
+      {albumData.map((item, index) => ( 
+         <AlbumItem item={item} addToCart={addToFavs} remove = {removeFromCart} /> 
       ))}
       </div>
-      <div className="Cart">
-        <h2>Cart</h2>
+      <div className="Favorites">
+        <h2>Favorites</h2>
         <ul>
           {cartItems.map((itemName, index) => (
-            <li key={index}>{itemCounts[itemName]} x {itemName}
-            <button onClick={() => removeFromCart(bakeryData.find(item => item.name === itemName))}>
-                Remove from Cart
-              </button>
+            <li key={index}>{itemName}
             </li>
           ))}
         </ul>
-        <p>Total: ${totalPrice.toFixed(2)}</p>
+        <p>{totalFavorites} Liked Albums</p>
       </div>
     </div>
       

@@ -1,0 +1,157 @@
+[
+    {
+      "artist": "The Beatles",
+      "date": "22.03.1963",
+      "album": "Please Please Me",
+      "type": "primary",
+      "label":"Parlephone",
+      "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/63/11/dc/6311dc1f-f8cb-6cfb-36c1-21dcfd143da7/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "22.11.1963",
+      "album": "With the Beatles",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is2-ssl.mzstatic.com/image/thumb/Music/v4/2e/ef/98/2eef98bb-7f0d-a524-4ef9-a7d3f06acae4/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "10.07.1964",
+      "album": "A Hard Day’s Night",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/34/fd/0a/34fd0a7b-7fb5-9bc5-032b-c1cd3d89ddd1/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "04.12.1964",
+      "album": "Beatles For Sale",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is2-ssl.mzstatic.com/image/thumb/Music/v4/5f/f5/91/5ff59179-0878-5018-9a75-71f3bb2ad357/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "06.08.1965",
+      "album": "Help!",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/5b/7d/6e/5b7d6e78-9095-7453-c9ec-21032ddb8c1a/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "03.12.1965",
+      "album": "Rubber Soul",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is5-ssl.mzstatic.com/image/thumb/Music/v4/f8/4b/79/f84b79f5-4b11-2e98-2e38-23a8c575d42a/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "05.08.1966",
+      "album": "Revolver",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/b3/db/c7/b3dbc75f-4146-3556-ffce-4b679b3aca7e/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "01.06.1967",
+      "album": "Sgt. Pepper’s Lonely Hearts Club Band",
+      "type": "Studio",
+      "label":"Parlephone",
+      "cover": "https://is5-ssl.mzstatic.com/image/thumb/Music/v4/8c/2a/05/8c2a0589-3e7b-c207-64ea-17643bac5e97/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "27.11.1967",
+      "album": "Magical Mystery Tour",
+      "type": "US",
+      "label":"Capitol",
+      "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/33/d3/2e/33d32ef8-61d5-1785-d27b-fd3ab8ae7438/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "22.11.1968",
+      "album": "The Beatles",
+      "type": "Studio",
+      "label":"Apple",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/9d/39/13/9d39136a-7ede-758e-b6bd-86dbafc3d454/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "17.01.1969",
+      "album": "Yellow Submarine",
+      "type": "Studio",
+      "label":"Apple",
+      "cover": "https://is2-ssl.mzstatic.com/image/thumb/Music/v4/d5/d0/7b/d5d07b72-f45e-cc17-f56b-962177368344/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "26.09.1969",
+      "album": "Abbey Road",
+      "type": "Studio",
+      "label":"Apple",
+      "cover": "https://is2-ssl.mzstatic.com/image/thumb/Music/v4/40/d0/29/40d029b5-4c32-53d2-69d1-ea04a513c345/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "08.05.1970",
+      "album": "Let It Be",
+      "type": "Studio",
+      "label":"Apple",
+      "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/ff/8d/33/ff8d33f4-6c44-aedd-0b6c-2796930bef80/source/600x600bb.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "24.07.2012",
+      "album": "Tomorrow Never Knows",
+      "type": "Compliation",
+      "label":"Apple",
+      "cover": "images/tmrNever.jpg"
+    },
+    {
+      "artist": "The Beatles",
+      "date": "22.11.1968",
+      "album": "The Beatles [Deluxe]",
+      "type": "Deluxe",
+      "label":"Apple",
+      "cover": "images/delWhite.jpg"
+    }, {
+      "artist": "The Beatles",
+      "date": "01.06.1967",
+      "album": "Sgt. Pepper's Lonely Hearts Club Band [Deluxe]",
+      "type": "Deluxe",
+      "label":"Apple",
+      "cover": "images/delPepper.jpg"
+    }  , {
+      "artist": "The Beatles",
+      "date": "26.09.1969",
+      "album": "Abbey Road [Deluxe]",
+      "type": "Deluxe",
+      "label":"Apple",
+      "cover": "images/delAbby.jpg"
+    }  , {
+      "artist": "The Beatles",
+      "date": "20.11.1995",
+      "album": "Anthology 1",
+      "type": "Anthology",
+      "label":"Parlephone",
+      "cover": "images/anth1.jpg"
+    } , {
+      "artist": "The Beatles",
+      "date": "20.11.1995",
+      "album": "Anthology 2",
+      "type": "Anthology",
+      "label":"Parlephone",
+      "cover": "images/anth2.jpg"
+    } , {
+      "artist": "The Beatles",
+      "date": "28.10.1996",
+      "album": "Anthology 3",
+      "type": "Anthology",
+      "label":"Parlephone",
+      "cover": "images/anth3.jpg"
+    } 
+  ]

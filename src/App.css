@@ -1,26 +1,44 @@
 /* Add styling for your page here */
-
+body{
+    background-color: #101010;
+}
 .App {
+    
 }
 .pageContents{
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
 }
-.BakeryItem {
-    width:300px;
+.AlbumItem {
+    width:210px;
+    margin:10px;
+    align-items: center;
+    background-color: gray;
+    padding:10px;
+    border-radius: 10px;
+}
+p{
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 15px;
+}
+.AlbTitle{
+    float:left;
+    width: 90%;
+    text-align: left;
 }
 h1{
     text-align: center;
 }
 img{
-width:80%
+width:210px
 }
-.Cart{
+.Favorites{
     margin:2%;
     width:20%;
 }
-.bakeryItems{
+.albumList{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; /* Adjust as needed */
@@ -28,8 +46,18 @@ width:80%
   width:80%;
   margin: 0;
 }
+.topAlbum{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 ul, ol {
     list-style-type: none;
     padding-left: 1vw;
   }
+#heart {
+    width: 20px;
+    float: right;
+}
+
 
