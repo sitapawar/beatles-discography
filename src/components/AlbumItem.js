@@ -26,8 +26,6 @@ function AlbumItem({item, addToCart, remove}) {
         </div>
         </div>
         <p>{item.date}
-        <br></br>
-        <br></br>
         </p>  
     </div>
   );

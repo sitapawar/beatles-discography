@@ -1,6 +1,13 @@
-/* Add styling for your page here */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;400i;700;700i&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+@font-face {
+    font-family: 'Bootle';
+    src: url('./assets/fonts/bootle-font/Bootle-4B9l.ttf') format('truetype'); 
+  }
 body{
-    background-color: #101010;
+    /* background-color: #101010; */
 }
 .App {
     
@@ -14,14 +21,18 @@ body{
     width:210px;
     margin:10px;
     align-items: center;
-    background-color: gray;
+    background-color: whitesmoke
+    ;
     padding:10px;
     border-radius: 10px;
 }
 p{
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
     font-size: 15px;
+    padding: 0px;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .AlbTitle{
     float:left;
@@ -30,18 +41,28 @@ p{
 }
 h1{
     text-align: center;
+    color: black;
+    font-family:'Bootle';
+}
+h2{
+    color: black;
+    font-family: 'Bootle';
+    text-transform: uppercase;
 }
 img{
 width:210px
 }
 .Favorites{
-    margin:2%;
+    margin:1%;
     width:20%;
+    padding:10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
 }
 .albumList{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-around; 
   flex-grow:1;
   width:80%;
   margin: 0;
@@ -52,12 +73,47 @@ width:210px
     justify-content: space-around;
 }
 ul, ol {
+    font-family: 'Merriweather', serif;
     list-style-type: none;
     padding-left: 1vw;
+    color:black;;
+    margin:3px;
   }
+li{
+    margin:6px;
+}
 #heart {
     width: 20px;
     float: right;
+}
+.HeaderButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2vw;
+    width:80%;
+    margin:auto;
+}
+button{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: whitesmoke;
+    border: none;
+    padding:12px;
+    border-radius: 8px;
+
+
+}
+select{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border: none;
+    background-color: whitesmoke;
+    padding:12px;
+    border-radius: 8px;
+}
+hr{
+    border-color: whitesmoke;
 }
 
 

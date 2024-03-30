@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Heart({ isActive, onClick, animationTrigger = "click", animationScale = 1.05, animationDuration = 0.05, inactiveColor = "black", activeColor = "red", className, style }) {
+export default function Heart({ isActive, onClick, animationTrigger = "click", animationScale = 1.05, animationDuration = 0.05, inactiveColor = "black", activeColor = "black", className, style }) {
   const svgClassName = `heart-svg ${className}`;
   const svgStyle = {
     fill: isActive ? activeColor : "transparent",
