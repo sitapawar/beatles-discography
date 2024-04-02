@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
+// This code is adapted from Matthew Ferrari's github on how to make a react heart. 
+// It is largely his design that I adapted and repurposed to fit the style of my site and structure. 
+// The code that allows the heart to put an item in and out of the favorite's list is entirely my own.
+// Source: https://github.com/matthewgferrari/react-heart/tree/main/src 
+
 export default function Heart({ isActive, onClick, animationTrigger = "click", animationScale = 1.05, animationDuration = 0.05, inactiveColor = "black", activeColor = "black", className, style }) {
   const svgClassName = `heart-svg ${className}`;
   const svgStyle = {
