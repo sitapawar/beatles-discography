@@ -3,7 +3,7 @@
       "artist": "The Beatles",
       "date": "22.03.1963",
       "title":"Please Please Me",
-      "type": "primary",
+      "type": "Studio",
       "label":"Parlephone",
       "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/63/11/dc/6311dc1f-f8cb-6cfb-36c1-21dcfd143da7/source/600x600bb.jpg"
     },
@@ -67,7 +67,7 @@
       "artist": "The Beatles",
       "date": "27.11.1967",
       "title": "Magical Mystery Tour",
-      "type": "US",
+      "type": "US Studio",
       "label":"Capitol",
       "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/33/d3/2e/33d32ef8-61d5-1785-d27b-fd3ab8ae7438/source/600x600bb.jpg"
     },
@@ -107,7 +107,7 @@
       "artist": "The Beatles",
       "date": "24.07.2012",
       "title": "Tomorrow Never Knows",
-      "type": "Compliation",
+      "type": "Compilation",
       "label":"Apple",
       "cover": "tmrNever"
     },

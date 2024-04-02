@@ -73,7 +73,6 @@ width:210px
     justify-content: space-around;
 }
 ul, ol {
-    font-family: 'Merriweather', serif;
     list-style-type: none;
     padding-left: 1vw;
     color:black;;
@@ -95,18 +94,21 @@ li{
     margin:auto;
 }
 button{
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-right: 3vw;
     background-color: whitesmoke;
     border: none;
     padding:12px;
     border-radius: 8px;
-
+    font-size: 16px;
 
 }
 select{
-    margin-left: 5vw;
-    margin-right: 5vw;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+.filterButton{
+    margin-right: 3vw;
     border: none;
     background-color: whitesmoke;
     padding:12px;
@@ -114,6 +116,23 @@ select{
 }
 hr{
     border-color: whitesmoke;
+}
+.FavAlb{
+    margin:7px;
+    padding: 5px;
+    background-color: white;
+    height: 50px;
+}
+.favImg{
+    float: left;
+    height: 100%;
+    width:fit-content;
+    margin-right: 12px;
+    align-items: center;
+    align-items: center;
+    margin-top:auto;
+}
+.favTitle{
 }
 
 

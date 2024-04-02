@@ -2,54 +2,81 @@ import "./App.css";
 import { useState } from "react";
 import albumData from "./assets/albumData.json";
 import AlbumItem from "./components/AlbumItem";
+import FavItem from "./components/favItem";
+
 
 
 function App() {
   //State Variables
   const [favorites, setFavs] = useState([]);
-  const [itemCounts, setItemCounts] = useState({}); // State to keep track of item counts
-  const cartItems = Object.keys(itemCounts).filter(itemName => itemCounts[itemName] > 0);
   const [sortBy, setSortBy] = useState("date"); // State variable to keep track of sorting option
-  const [filterLabel, setFilterBy] = useState("none"); // State variable to keep track of filter option
+  const [filterBy, setFilterBy] = useState("none"); // State variable to keep track of filter option
+  const [filter2By, setFilter2By] = useState("none"); // State variable to keep track of filter option
 
 
   const addToFavs = (item) => {
     setFavs([...favorites, item]);
-    setItemCounts(prevCounts => ({
-      ...prevCounts,
-      [item.album]: (prevCounts[item.album] || 0) + 1 // Increment count for the item
-    }));
   };
 
   // Remove the item from the cart
   const removeFromCart = (item) => {
     setFavs(favorites.filter(cartItem => cartItem !== item));  
-    setItemCounts(prevCounts => ({
-      ...prevCounts,
-      [item.album]: (prevCounts[item.album] || 0) - 1 // decrease count for the item
-    }));
   };
   const totalFavorites = favorites.length;
-
-   // Function to handle sorting
-   const handleSort = (event) => {
-    setSortBy(event.target.value);
-  };
 
   // Function to handle filtering
   const handleFilter = (event) => {
     setFilterBy(event.target.value);
   };
 
-  // Sort the albumData based on the selected sort option
-  const sortedAlbumData = [...albumData].sort((a, b) => {
-    if (sortBy === "title") {
-      return a.album.localeCompare(b.album); // Sort alphabetically by album title
+  const handleFilter2 = (event) => {
+    setFilter2By(event.target.value);
+  };
+
+   // Filter the albumData based on the selected filter option
+   const filteredAlbumData = albumData.filter(item => {
+    if (filterBy === "studio") {
+      return item.type === "Studio";
+    } else if (filterBy === "compil") {
+      return item.type === "Compilation";
+    } else if (filterBy === "anthology") {
+      return item.type === "Anthology";
+    } else if (filterBy === "UStudio") {
+      return item.type === "US";
+    } else if (filterBy === "deluxe") {
+      return item.type === "Deluxe";
+    } else if (filterBy === "Parlephone") {
+      return item.label === "Parlephone";
+    }else if (filterBy === "Apple") {
+      return item.label === "Apple";
+    }else if (filterBy === "none") {
+      return true;
     } else {
-      // Add more sorting options if needed
+      return true;
+    }
+  });
+
+  const filtered2AlbumData = filteredAlbumData.filter(item => {
+    if (filter2By === "Parlephone") {
+      return item.label === "Parlephone";
+    }else if (filter2By === "Apple") {
+      return item.label === "Apple";
+    }else if (filter2By === "none") {
+      return true;
+    } else {
+      return true;
+    }
+  });
+
+  // Sort the albumData based on the selected sort option
+  const sortedAlbumData = [...filtered2AlbumData].sort((a, b) => {
+    if (sortBy === "title") {
+      return a.album.localeCompare(b.album); // Sort alphabetically by title
+    } else {
       return 0;
     }
   });
+
 
   return (
     <div className="App">
@@ -61,16 +88,27 @@ function App() {
     <div class ="pageContents">
     <div class ="albumList">
     <div className="HeaderButtons">
-    <select onChange={handleSort}>
-              <option value="date">Sort by Date</option>
-              <option value="title">Sort by Title</option>
-            </select>
-        <select>
-          <option value="label">Filter by Label</option>
-          <option value="albumType">Filter by Album Type</option>
-          <option value="albumType">View All</option>
+    <button onClick={() => {setSortBy("date"); setFilterBy('none'); setFilter2By('none');}}>Default</button>
+    <button onClick={() => setSortBy("title")}>Sort by Title</button>
+    <div class='filterButton'>
+    <label htmlFor="typeFilter">Filter by Type: </label>
+          <select id="typeFilter" value={filterBy} onChange={handleFilter}>
+          <option value="none">All</option>
+          <option value="studio">Studio</option>
+          <option value="compil">Compilation</option>
+          <option value="deluxe">Deluxe</option>
+          <option value="anthology">Anthology</option>
+          <option value="UStudio">US Studio</option>
         </select>
-        <button>Default</button>
+    </div>
+    <div class='filterButton'>
+    <label htmlFor="labelFilter">Filter by Label: </label>
+          <select id="labelFilter" value={filter2By} onChange={handleFilter2}>
+          <option value="none">All</option>
+          <option value="Apple">Apple</option>
+          <option value="Parlephone">Parlephone</option>
+        </select>
+    </div>
       </div>
       {sortedAlbumData.map((item, index) => ( 
          <AlbumItem item={item} addToCart={addToFavs} remove = {removeFromCart} /> 
@@ -78,12 +116,10 @@ function App() {
       </div>
       <div className="Favorites">
         <h2>FAVORITES</h2>
-        <ul>
-          {cartItems.map((itemName, index) => (
-            <li key={index}>{itemName}
-            </li>
-          ))}
-        </ul>
+          {favorites.map((item, index) => (
+           <FavItem item={item}/>
+          ))}         
+          <br></br>
         <p>{totalFavorites} Liked Albums</p>
       </div>
     </div>
